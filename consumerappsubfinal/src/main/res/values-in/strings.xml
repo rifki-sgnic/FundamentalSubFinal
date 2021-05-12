@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GitHub ConsumerApp</string>
+    <string name="count">count</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="company">Perusahaan</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="username">username</string>
+    <string name="repository">Repositori</string>
+    <string name="location">Lokasi</string>
+    <string name="title">GitHub Users</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="company_icon">Company Icon</string>
+    <string name="location_icon">Location Icon</string>
+    <string name="fav_list">List Favorit</string>
+    <string name="share_title">Bagikan akun GitHub milik %1$s</string>
+    <string name="share_sub">Hi, jadikan %1$s favorit di Github User App. Lihat profil GitHub miliknya : https://github.com/%2$s</string>
+    <string name="ca_fl">Consumer App Fav List</string>
+    <string name="no_data_available">Tidak Ada Data Tersedia</string>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GitHub ConsumerApp</string>
+    <string name="count">count</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="company">Company</string>
+    <string name="nama_lengkap">Full Name</string>
+    <string name="username">username</string>
+    <string name="repository">Repositories</string>
+    <string name="location">Location</string>
+    <string name="title">GitHub Users</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="company_icon">Company Icon</string>
+    <string name="location_icon">Location Icon</string>
+    <string name="fav_list">Favorite List</string>
+    <string name="share_title">Share %1$s\'s Github Account</string>
+    <string name="share_sub">Hi, make %1$s to favorite on Github User App. Check out his/her GitHub Profile : https://github.com/%2$s</string>
+    <string name="ca_fl">Consumer App Fav List</string>
+    <string name="no_data_available">No Data Available</string>
+</resources>
