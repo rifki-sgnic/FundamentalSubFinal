@@ -1,0 +1,3 @@
+include ':consumerappsubfinal'
+include ':app'
+rootProject.name = "FundamentalSubFinal"
