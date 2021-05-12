@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dicoding.picodiploma.fundamentalsubfinal">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.dicoding.fundamentalsubfinal.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.dicoding.fundamentalsubfinal.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <queries>
+        <package android:name="com.dicoding.picodiploma.fundamentalsubfinal" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FundamentalSubFinal">
+        <service
+            android:name="com.dicoding.picodiploma.fundamentalsubfinal.widget.StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver android:name=".widget.StackWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/stack_widget_info" />
+        </receiver>
+
+        <provider
+            android:name=".provider.FavoProvider"
+            android:authorities="com.dicoding.picodiploma.fundamentalsubfinal"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.dicoding.fundamentalsubfinal.READ_DATABASE"
+            android:writePermission="com.dicoding.fundamentalsubfinal.WRITE_DATABASE" />
+
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/Theme.FundamentalSubFinal.NoActionBar.Dark" />
+        <activity
+            android:name=".ui.FavoriteActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/Theme.FundamentalSubFinal.NoActionBar" />
+        <activity
+            android:name=".ui.DetailUserActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/Theme.FundamentalSubFinal.NoActionBar" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@style/Theme.FundamentalSubFinal.NoActionBar" />
+    </application>
+
+</manifest>

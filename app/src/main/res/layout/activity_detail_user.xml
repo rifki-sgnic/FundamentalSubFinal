@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgray"
+    tools:context=".ui.DetailUserActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navyblue_700"
+        app:menu="@menu/menu_fav"
+        app:title="@string/username"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layoutA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:civ_border_color="@color/lightgray"
+            app:civ_border_width="2dp"
+            tools:src="@drawable/ic_github_light" />
+
+        <LinearLayout
+            android:id="@+id/user_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_img"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_profile_name"
+                style="@style/TextContent.Heading"
+                android:text="@string/nama_lengkap" />
+
+            <TextView
+                android:id="@+id/tv_profile_username"
+                style="@style/TextContent.Medium"
+                android:text="@string/username" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@id/profile_img"
+            android:stretchColumns="0,1,2">
+
+            <TableRow
+                android:id="@+id/tr_counts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_followers_count"
+                    style="@style/CountList.Detail"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/count" />
+
+                <TextView
+                    android:id="@+id/tv_following_count"
+                    style="@style/CountList.Detail"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/count" />
+
+                <TextView
+                    android:id="@+id/tv_repository_count"
+                    style="@style/CountList.Detail"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/count" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tr_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_followers"
+                    style="@style/TextCountList.Detail"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/followers" />
+
+                <TextView
+                    android:id="@+id/tv_following"
+                    style="@style/TextCountList.Detail"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/following" />
+
+                <TextView
+                    android:id="@+id/tv_repository"
+                    style="@style/TextCountList.Detail"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="@string/repository" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_detail"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/iv_company"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/company_icon"
+                    android:src="@drawable/ic_baseline_apartment_24"
+                    app:tint="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/tv_profile_company"
+                    style="@style/TextContent.Medium"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/company" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/location_icon"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    app:tint="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/tv_profile_location"
+                    style="@style/TextContent.Medium"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/location" />
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/layoutA"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutA">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkgray"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/orange"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/lightgray" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/navyblue_700"
+        app:tint="@color/darkred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+        android:contentDescription="@string/favorite_button" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

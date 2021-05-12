@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:iconSpaceReserved="false"
+    app:theme="@style/Theme.FundamentalSubFinal.NoActionBar.Dark">
+
+    <PreferenceCategory android:title="@string/general">
+        <SwitchPreference
+            android:icon="@drawable/ic_baseline_alarm_24"
+            android:key="@string/key_switch"
+            android:summary="@string/reminder_summary"
+            android:title="@string/reminder_at" />
+
+        <Preference
+            android:icon="@drawable/ic_baseline_g_translate_24"
+            android:key="@string/key_pref"
+            android:summary="@string/sum_lang"
+            android:title="@string/select_language">
+                <intent android:action="android.settings.LOCALE_SETTINGS" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

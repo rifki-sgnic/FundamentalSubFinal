@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GitHub User App</string>
+    <string name="search_hint">Cari</string>
+    <string name="count">count</string>
+    <string name="followers">Pengikut</string>
+    <string name="following">Mengikuti</string>
+    <string name="company">Perusahaan</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="username">username</string>
+    <string name="repository">Repositori</string>
+    <string name="location">Lokasi</string>
+    <string name="subtitle">Halo Developer!</string>
+    <string name="title">GitHub Users</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="company_icon">Company Icon</string>
+    <string name="location_icon">Location Icon</string>
+    <string name="fav_list">List Favorit</string>
+    <string name="share_title">Bagikan akun GitHub milik %1$s</string>
+    <string name="share_sub">Hi, jadikan %1$s favorit di Github User App. Lihat profil GitHub miliknya : https://github.com/%2$s</string>
+    <string name="settings">Pengaturan</string>
+    <string name="favorite_button">Tombol Favorit</string>
+    <string name="key_switch">alarm</string>
+    <string name="key_pref">lang</string>
+    <string name="reminder_at">Pengingat Jam 9 Pagi</string>
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="reminder_summary">Atur pengingat berulang</string>
+    <string name="general">Umum</string>
+    <string name="sum_lang">Indonesia</string>
+    <string name="no_data_available">Tidak Ada Data Tersedia</string>
+    <string name="daily_reminder_enabled">Pengingat Harian Dinyalakan</string>
+    <string name="daily_reminder_disabled">Pengingat Harian Dimatikan</string>
+    <string name="add_fav">Ditambahkan ke Favorit</string>
+    <string name="remove_fav">Dihapus dari Favorit</string>
+    <string name="appwidget_text">USER FAVORIT</string>
+    <string name="empty_text">TIDAK ADA DATA</string>
+    <string name="share_button">Tombol Bagikan</string>
+</resources>
